@@ -1,0 +1,5 @@
+entrada = input().split(' ')
+inicioEmMin = (60*int(entrada[0])) + int(entrada[1])
+finalEmMin = (60*int(entrada[2])) + int(entrada[3])
+duracaoMin = abs(inicioEmMin - finalEmMin) if inicioEmMin < finalEmMin else 1440 - abs(abs(-1440+finalEmMin) - (1440-inicioEmMin))
+print('O JOGO DUROU %i HORA(S) E %i MINUTO(S)' %(int(duracaoMin/60), int(duracaoMin%60)))
